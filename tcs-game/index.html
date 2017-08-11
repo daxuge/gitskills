@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>贪吃蛇</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<link rel="stylesheet" href="css/index.css" />
+	<script src="js/index.js"></script>
+</head>
+<body onload="init();" onkeyup="control(event);" >
+<div class="backDiv">
+	<div class="display">
+		<div id="scoreDiv">分数：0</div><br/>
+		<div id="prompt"></div>
+	</div>
+	<div id="gamePanel" ></div><br/>
+	<div id="operator">
+		选择关卡：<select id="pass" onchange="barrer();">
+			<option value="1">关卡1</option>
+			<option value="2">关卡2</option>
+			<option value="3">关卡3</option>
+			<option value="4">关卡4</option>
+			<option value="5">关卡5</option>
+		</select>&nbsp&nbsp
+		速度：<select id="rate">
+			<option value="500">慢</option>
+			<option value="250">中</option>
+			<option value="100">快</option>
+		</select>&nbsp&nbsp
+		<input type="button" id="start" value="开始" onclick="startGame();" />&nbsp&nbsp
+		<input type="button" id="resets" value="重玩" onclick="init();" />
+	</div>
+	<div id="result"></div>
+</div>
+</body>
+</html>
